@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проектный офис | Цифровая Территория</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="hero-wrapper">
+        <div class="container">
+            <header class="header animate__animated animate__fadeIn">
+                <div class="header-titles">
+                    <span class="brand">Ростелеком</span>
+                    <span class="office">ПРОЕКТНЫЙ ОФИС</span>
+                </div>
+            </header>
+
+            <section class="hero-main">
+                <h1 class="animate__animated animate__fadeInLeft">Цифровая территория</h1>
+                <p class="animate__animated animate__fadeInLeft animate__delay-1s">
+                    Комплексная экосистема технологических решений для лидеров промышленности. 
+                    Интеграция инноваций в существующую инфраструктуру.
+                </p>
+                <div class="hero-btns animate__animated animate__fadeInUp animate__delay-2s">
+                    <button class="btn-glow" onclick="document.getElementById('catalog').scrollIntoView({behavior: 'smooth'})">
+                        <span>Смотреть решения</span>
+                    </button>
+                </div>
+            </section>
+
+            <nav id="catalog" class="main-nav">
+                <div class="nav-card" onclick="openSlide('robotics')">
+                    <span class="step">01</span>
+                    <h3>Роботизация</h3>
+                </div>
+                <div class="nav-card" onclick="openSlide('quality')">
+                    <span class="step">02</span>
+                    <h3>Контроль качества</h3>
+                </div>
+                <div class="nav-card" onclick="openSlide('security')">
+                    <span class="step">03</span>
+                    <h3>Средства охраны</h3>
+                </div>
+                <div class="nav-card" onclick="openSlide('eco')">
+                    <span class="step">04</span>
+                    <h3>Экомониторинг</h3>
+                </div>
+                <div class="nav-card" onclick="openSlide('equipment')">
+                    <span class="step">05</span>
+                    <h3>Тех. оборудование</h3>
+                </div>
+            </nav>
+        </div>
+    </main>
+
+    <section class="territory-complex">
+        <div class="container">
+            <h2 class="section-title">Цифровая Территория: Масштаб и Глубина</h2>
+            <div class="t-grid">
+                <div class="t-item">
+                    <div class="t-icon"></div>
+                    <h4>Private LTE/5G</h4>
+                    <p>Создание выделенных беспроводных сетей связи на территории предприятия для гарантированной передачи данных в реальном времени.</p>
+                </div>
+                <div class="t-item">
+                    <div class="t-icon"></div>
+                    <h4>Цифровой двойник</h4>
+                    <p>Виртуальное моделирование производственных процессов для прогнозирования сбоев и оптимизации циклов выпуска продукции.</p>
+                </div>
+                <div class="t-item">
+                    <div class="t-icon"></div>
+                    <h4>Edge Computing</h4>
+                    <p>Обработка данных непосредственно на месте возникновения (на "границе" сети), что минимизирует задержки и нагрузку на каналы.</p>
+                </div>
+                <div class="t-item">
+                    <div class="t-icon"></div>
+                    <h4>Кибербезопасность АСУ ТП</h4>
+                    <p>Защита технологического контура от внешних угроз в соответствии с требованиями КИИ (ФЗ-187).</p>
+                </div>
+                <div class="t-item">
+                    <div class="t-icon"></div>
+                    <h4>Сквозная аналитика</h4>
+                    <p>Сбор данных со всех уровней производства в единый ситуационный центр для принятия управленческих решений.</p>
+                </div>
+                <div class="t-item">
+                    <div class="t-icon"></div>
+                    <h4>Умный город внутри завода</h4>
+                    <p>Управление освещением, логистикой и микроклиматом цехов через единую IoT-платформу.</p>
+                </div>
+            </div>
+            
+            <div class="t-footer">
+                <p>Проектный офис обеспечивает полный цикл: от первичного аудита и проектирования до сервисной поддержки 24/7 по всей территории РФ.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-wrap">
+            <button class="close-btn" onclick="closeSlide()">✕ ЗАКРЫТЬ</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
